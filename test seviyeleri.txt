@@ -1,0 +1,77 @@
+Hedefe Göre Yazılım Test Seviyeleri
+Hedefe göre yazılım test seviyeleri nelerdir? Yazılım test aktiviteleri genelde geliştirme ve bakım süreçleri boyunca farklı düzeylerde gerçekleştirilir. Yani testin hedefi değişebilir: tek bir modül, bu modüllerden oluşan bir grup ya da bütün bir sistem. Bu 3 test aşaması olan birim, entegrasyon ve sistem testi sonrasında da kabul / yeterlilik testi de müşterinin gereksinimini karşılayıp karşılamadığını ölçmek için yapılır. Bu yazılım test türleri nelerdir görelim.
+
+Birim Testi (Unit Testing)
+Test seviyeleri ile ilgili olarak, en düşük seviyede yapılan testtir. Test edilebilir en küçük yazılım parçası olan ve çoğu zaman “birim”, “modül”, “bileşen” olarak adlandırılan yazılımın temel kısımlarını test eder. Bu test, resmi olarak test ekibi testlerini koşmadan önce geliştiriciler tarafından gerçekleştirilir. Geliştiriciler kalite güvence ekibinin verisinden farklı test verilerini kullanır.
+
+Unit-Test
+
+Birim testinin amacı, her bir modülü veya birimi izole ederek bu kısmın gereksinimler ve işlevsellik açısından doğru olduğunu göstermektir.
+
+Bu birimlerin test edilebilmesi için bağımlı olduğu diğer modül veya bileşenler hazır değilse bu kısımlar stub ve driver adı verilen “dummy module”ler kullanılır.
+
+Entegrasyon Testi (Integration Testing)
+Entegrasyon testi, bir uygulamanın birleşik bölümlerinin, doğru şekilde işlev görüp görmediğini test etmek için test edilmesi olarak tanımlanır. Entegrasyon testi, yazılımdaki modüllerin veya bileşenlerin birbirleri arasındaki etkileşimin doğrulanması sürecidir.
+
+Entegrasyon testlerinde test metodolojileri genellikle büyük ölçüde değişebilir ancak bunlar iki temel test stratejisi çerçevesinde uygulanır:
+
+Bigbang Testi – Bigbang Testing
+Test edilecek tüm paket hazır olduğunda ürünün tamamını test etme.
+
+Artımlı Test – Incremental Testing
+Yazılımı modüller halinde parça parça test etmek için birim testleri; daha sonra tamamlanan modüllerle bu modül gruplarını test etmek için entegrasyon testleridir. Bu işlem tüm paket test edilinceye kadar devam eder. Bu aşamalar tamamlandıktan sonra sistem bir bütün halinde test edilir. Ek olarak, artımlı test de bottom-up testing (aşağıdan yukarıya) ve top-down testing (yukarıdan aşağıya) olmak üzere iki temel stratejiye göre gerçekleştirilir. Her iki artımlı test stratejisi, yazılım paketinin yazılım modüllerinin bir hiyerarşisinden yapıldığını varsaymaktadır. Top-down testlerde, test edilen ilk modül ana modüldür, yazılım yapısındaki en üst seviye modüldür; test edilecek son modüller en düşük seviye modülleridir. Bottom-up testlerde, test sırası tersine çevrilir: en düşük seviyedeki modüller önce test edilmiş ana modül ile test edilir.
+
+Uygulama tam ve çalışan bir uygulamaya bağlandığında arabirimler entegrasyon testi sırasında daha uygun bir şekilde test edilir. Bu entegrasyon sürecinin bir sonucu olarak, entegrasyon testi sırasında yazılım alt sistemleri ve son olarak tamamlanmış bir sistem bir araya getirilir. Tamamlanan sistem daha sonra sistem testi için hazırdır.
+
+Sistem Testi (System Testing)
+Sistem testi bütün bir sistemin davranışı ile ilgilidir. Fonksiyonel başarısızlıkların çoğu birim ve entegrasyon testlerinde zaten tespit edilmiş olmalıdır. Sistem testi; güvenlik, hız, doğruluk, güvenirlik gibi fonksiyonel olmayan sistem gereksinimleri konusunda karşılaştırma yapılabilmesi için uygundur.
+
+Sistem testi önemlidir çünkü:
+
+Uygulamanın bir bütün olarak test edildiği yazılım geliştirme yaşam döngüsünün ilk adımıdır.
+Uygulamanın fonksiyonel ve teknik özelliklerini karşıladığından emin olmak için iyice test edilmiştir.
+Uygulama, yaygınlaştırıldığı ortama çok yakın bir ortamda test edilmiştir.
+Sistem testi, hem kullanıcı gereksinimlerini hem de uygulama mimarisini test etmemizi, geçerleme yapmamızı ve doğrulamamızı sağlar.
+Entegrasyon testleri tamamlandığında, bir yazılım bir araya getirilmiş ve ana alt sistemleri test edilmiştir. Bu noktada geliştiriciler / testçiler bunu bir bütün olarak test etmeye başlar. Sistem testi planlaması gereksinimler fazında başlamalıdır. Sistem testi planlaması karmaşık bir iştir. Planın, test yaklaşımları, maliyetler, çizelgeler, test senaryoları ve test prosedürleri gibi hazırlanması gereken birçok bileşeni vardır.
+
+Sistem testi güvenilirlik, kullanılabilirlik, performans ve güvenlik gibi fonksiyonel davranışları ve kalite gereksinimlerini değerlendirir. Bu test aşaması, örneğin farklı koşullara, kilitlenmelere, kesinti ve istisnai işlem sorunlarına ve etkin olmayan bellek kullanımı gibi harici donanım ve yazılım önyüzü hatalarını tespit etmek için özellikle yararlıdır. Sistem testinden sonra yazılım, kabul testi veya alfa/beta testi sırasında değerlendirme için kullanıcılara teslim edilecektir. Kullanıcılar/istemciler sistemi kullanmaya başlamadan önce yazılımın kalitesinin ölçüldüğünden ve değerlendirildiğinden emin olmak isteyecektir. Aslında sistem testi, kabul testi için iyi bir prova senaryosu olarak hizmet eder. Çeşitli amaçlara göre yapılan test türlerini (fonksiyonel test, performans testi, stres testi, yapılandırma testi, güvenlik testi vb.) Amaca Göre Test Seviyeleri yazımızdan inceleyebilirsiniz.
+
+Test-Seviyeleri
+
+Kabul/Yeterlilik Testi (Acceptance/Qualification Testing)
+Uygulamanın istenen özelliklere uygun olup olmadığını ve müşterinin gereksinimini karşılayıp karşılamadığını ölçmek için müşteri veya kalite güvence ekibi tarafından yürütülür. Kabul testi sistem davranışını müşterinin gereksinimlerine karşı kontrol eder. Müşteriler gereksinimlerin karşılandığını görebilmek için sistem üzerinde gereken görevleri üstlenirler. Yani sistem testi başarıyla tamamlanmış olsa da müşteri tarafından kabul testi istenmektedir yani yazılım üzerinde testi müşteri yapmaktadır. Burada yapılan testler sistem testinde ele alındığı için çoğunlukla tekrarlayıcıdır. Bu sürece sistem geliştiricileri de dahil olabilir. Yeterlilik testi ise yazılımın gereksinimlere uygunluğunu doğrulamak için yapılır ve müteakip kabul testleri için bir temel oluşturur.
+
+Kabul testi çeşitleri şunlardır:
+
+Kullanıcı Kabul Testi (User Acceptance Test – UAT)
+İş Kabul Testi (Business Acceptance Testing – CAT)
+Sözleşme Kabul Testi (Contract Acceptance Testing – CAT)
+Yönetmelik / Uygunluk Kabul Testi ( Regulations/Compliance Acceptance Testing – RAT)
+Operasyonel Kabul Testi (Operational Acceptance Testing – OAT)
+Alfa Testi (Alpha Testing)
+Beta Testi (Beta Testing)
+Alfa ve beta testleri için ayrıca Yazılım Test Teknikleri yazısını ziyaret edebilirsiniz.
+
+Bu yazı size ne kadar faydalı oldu?
+
+Değerlendirmek için bir yıldıza tıklayın!
+
+    
+İLİŞKİLİ YAYINLAR
+Yazılım Testine Giriş: Temel Kavramlar
+Yazılım Testine Giriş: Temel Kavramlar
+Yazılım Kalite Güvencesi – Software Quality Assurance (SQA)
+Yazılım Kalite Güvencesi – Software Quality Assurance (SQA)
+Yazılım Test Teknikleri
+Yazılım Test Teknikleri
+ÖNE ÇIKAN YAYINLAR
+JSON Nedir? Detaylı Açıklamalarıyla JSON Rehberi
+JSON Nedir? Detaylı Açıklamalarıyla JSON Rehberi
+COCOMO, Wideband Delphi, Planning Poker ve Story Points
+COCOMO, Wideband Delphi, Planning Poker ve Story Points
+İşlevsel Büyüklük Ölçümü: COSMIC Function Points ile Yazılım Büyüklüğü Kestirimi
+İşlevsel Büyüklük Ölçümü: COSMIC Function Points ile Yazılım Büyüklüğü Kestirimi
+Yazılımda Kestirim ve Yazılım Büyüklük Ölçümü
+Yazılımda Kestirim ve Yazılım Büyüklük Ölçümü
+Microservices Nedir? Kapsamlı Açıklamalarıyla Microservices’e Giriş
+Microservices Nedir? Kapsamlı Açıklamalarıyla Microservices’e Giriş
